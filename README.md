@@ -1,3 +1,4 @@
+#v2 -based on 
 #Slash
 
 Slash is a minimal theme for Octopress.

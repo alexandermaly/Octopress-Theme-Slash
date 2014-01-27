@@ -6,8 +6,16 @@
 	{% unless page.banner == false %}
 		{% include banner.html %}
 	{% endunless %}
-	<div id="content" class="inner">{{ content | expand_urls: root_url }}</div>
+	<div id="content" class="inner">{{ content | expand_urls: root_url }}
+	</div>
+	<div id="asides" class="inner">
+		{% if site.blog_index_asides.size %} {% include_array blog_index_asides %} {% else %} {% include_array default_asides %} {% endif %}
+	</div>
+    <div id="archives" class="inner"><h3><a href="{{ root_url }}/blog/archives">Blog Archives</a></h3></div>
+	<div id="footer" class="inner">
 	<footer id="footer" class="inner">{% include footer.html %}</footer>
 	{% include after_footer.html %}
+	</div>
+
 </body>
 </html>

@@ -18,13 +18,13 @@ body{
 	}
 }
 h1{
-	font-size: 1.8em;
+	font-size: 1.7em;
 }
 h2{
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 h3{
-	font-size: 1.3em;
+	font-size: 1.1em;
 }
 a{
 	text-decoration: none;
@@ -41,9 +41,16 @@ a{
 	@include pie-clearfix;
 }
 .inner{
+	clear: left;
 	width: $max-width;
 	margin: 0 auto;
 	@media screen and (max-width: 1040px){
 		width: 100%;
 	}
 }
+
+#footer, #archives{
+	border:0px;
+	padding-top:10px;
+}
+

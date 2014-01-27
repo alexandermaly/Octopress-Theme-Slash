@@ -1,10 +1,10 @@
-$header-height: 30px;
+$header-height: 123px;
+$title-height: 35px;
 
 #header{
 	height: $header-height;
-	padding: 30px 0;
+	padding: 10px 0;
 	border-bottom: 1px solid $color-gray04;
-	line-height: $header-height;
 	@media screen and (max-width: 1040px){
 		height: auto;
 		position: relative;
@@ -17,33 +17,68 @@ $header-height: 30px;
 			color: $color-main;
 		}
 	}
-	h1{
-		float: left;
-		font-weight: 300;
-		font-size: 30px;
+	
+	#logoblock{
+		float:left;
+		margin-right: 0px;
+		margin-left: 0px;
 		@media screen and (max-width: 1040px){
 			float: none;
 		}
 	}
+	#title{
+		margin-top:45px;
+		margin-left:42px;
+		margin-right:42px;
+		font-weight: 900;
+		font-size: 1.2em;
+	}
+	#subtitle{
+		margin-left: 85px;
+		font-weight: 200;
+		font-size: 0.8em;
+	}
 }
+
+
 #main-nav{
+	height:$header-height;
 	float: left;
-	margin-left: 30px;
+	border-left: 1px solid $color-gray02;
 	@media screen and (max-width: 1040px){
 		float: none;
 		margin-left: 0;
-		margin-top: 15px;
+		margin-top: 5px;
 	}
+	ul{
+		height:24px;
+	}
+
+	.head-tag{
+		font-size:9px;
+		font-weight: 700;
+		color:$color-gray01;
+		margin-top: 4px;
+		width: 65px;
+		float: left;
+		display:inline-block;
+		text-align:right;
+		padding-right: 10px;
+	}
+
 	>ul{
+		line-height: 12px;
+		margin-left: 5px;
+		padding-left: 15px;
 		@media screen and (max-width: 600px){
 			display: none;
 		}
 		>li{
-			margin-left: 50px;
+			margin-left: 5px;
 			@include inline-block;
 			@media screen and (max-width: 1040px){
 				margin-left: 0;
-				margin-right: 50px;
+				margin-right: 35px;
 				&:last-of-type{
 					margin-right: 0;
 				}
@@ -54,8 +89,8 @@ $header-height: 30px;
 				}
 			}
 			>a{
-				padding: 38px 0;
-				margin-top: -38px;
+				padding: 5px 0;
+				margin-top: 5px;
 				&:after{
 					content: "\f078";
 					color: $color-gray03;
@@ -73,9 +108,9 @@ $header-height: 30px;
 			}
 		}
 		ul{
-			position: absolute;
-			top: 60px;
-			left: -15px;
+			position: relative;
+			top: 0px;
+			left: 10px;
 			z-index: 10;
 			white-space: nowrap;
 			background: $color-gray04;
@@ -83,7 +118,7 @@ $header-height: 30px;
 			list-style: none;
 			display: none;
 			@media screen and (max-width: 1040px){
-				top: 40px;
+				top: 5px;
 			}
 			@include box-shadow(0 4px 8px rgba(0,0,0,0.1));
 			@include border-radius(0 0 5px 5px);
@@ -106,7 +141,7 @@ $header-height: 30px;
 				}
 				>a{
 					display: block;
-					padding: 5px 15px;
+					padding: 0px 0px;
 					&:after{
 						content: "\f054";
 						color: $color-gray02;
@@ -130,6 +165,7 @@ $header-height: 30px;
 		}
 		li{
 			position: relative;
+			height: 12px;
 			&:hover{
 				>ul{
 					display: block;
@@ -219,7 +255,7 @@ $header-height: 30px;
 			width: 30px;
 			height: 30px;
 			position: absolute;
-			top: 1px;
+			top: 3px;
 			right: -1px;
 			@include border-radius(0 5px 5px 0);
 			&:before{
@@ -257,9 +293,13 @@ $header-height: 30px;
 	}
 }
 #sub-nav{
+	float: left;
+	margin-top: 7px;
+	margin-left: 125px;
+	position: relative;
 	@media screen and (max-width: 1040px){
 		position: absolute;
-		top: 30px;
+		top: 23px;
 		right: 0;
 	}
 	@media screen and (max-width: 600px){
@@ -267,7 +307,7 @@ $header-height: 30px;
 	}
 	.search{
 		float: left;
-		margin-top: 1px;
+		margin-top: 0px;
 		position: relative;
 		@media screen and (max-width: 1040px){
 			float: none;

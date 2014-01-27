@@ -7,9 +7,9 @@
 	}
 	.meta{
 		position: absolute;
-		top: 85px;
+		top: 15px;
 		line-height: 2;
-		font-size: 0.9em;
+		font-size: 0.7em;
 		color: $color-gray02;
 		width: 170px;
 		@media screen and (max-width: 800px){
@@ -18,7 +18,7 @@
 			width: auto;
 		}
 		a{
-			@include link-colors($color-gray02, $color-gray01);
+			@include link-colors($color-gray03, $color-gray02);
 			@include transition(0.3s);
 		}
 		.date, .tags, .comments{
